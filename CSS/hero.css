@@ -1,0 +1,38 @@
+.intro{
+    color:var(--white);
+    font-size:1.4rem;
+}
+h1{
+    margin-top:15px;
+}
+h2{
+    color:var(--gold);
+    margin-top:10px;
+}
+.description{
+    margin-top: 25px;
+    max-width:550px;
+    font-size:1.1rem;
+}
+.profile-circle img{
+
+    width:430px;
+    height:430px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid var(--gold);
+
+    display:block;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -webkit-user-drag:none;
+
+    pointer-events:none;
+
+}

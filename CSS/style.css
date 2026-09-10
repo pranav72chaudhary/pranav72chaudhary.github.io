@@ -1,0 +1,147 @@
+/*==========================
+PREMIUM SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0B0B0B;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        180deg,
+        #8A6A18,
+        #D4AF37,
+        #F2D36B
+    );
+
+    border-radius:20px;
+
+    border:2px solid #0B0B0B;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+        180deg,
+        #B99228,
+        #F2D36B,
+        #FFD95A
+    );
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-padding-top:40px;
+
+}
+body{
+
+    overflow-x:hidden;
+
+    overscroll-behavior-x:none;
+
+}
+/*==========================
+UI INTERACTION POLISH
+==========================*/
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+.hero-right,
+.project-image,
+.browser,
+.skill-icon,
+.certificate-icon{
+
+    user-select:none;
+
+}
+/*==========================
+SCROLLBAR POLISH
+==========================*/
+
+html{
+
+    scrollbar-gutter:stable;
+
+}
+/*==========================
+IMAGE RENDERING POLISH
+==========================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+/*==========================
+MEDIA DEFAULTS
+==========================*/
+
+svg,
+canvas,
+video{
+
+    display:block;
+
+    max-width:100%;
+
+}
+/*==========================
+TEXT RENDERING
+==========================*/
+
+body{
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+/*==========================
+FORM INHERITANCE
+==========================*/
+
+input,
+textarea,
+button{
+
+    font:inherit;
+
+}
+/*==========================
+LINK DEFAULTS
+==========================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}

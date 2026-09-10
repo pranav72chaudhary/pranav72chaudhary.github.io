@@ -1,0 +1,33 @@
+:root{
+    /* COLORS */
+    --bg:#0A0A0A;
+    --surface:#151515;
+    --surface-2:#1D1D1D;
+    --gold:#D4AF37;
+    --gold-light:#E0C57A;
+    --gold-dark:#B9962E;
+    --white:#F7F7F7;
+    --text:#BEBEBE;
+    --border:#262626;
+    /* SHADOW */
+    --shadow:0px 15px 40px rgba(0,0,0,0.45);
+    /* RADIUS */
+    --radius:18px;
+    /* TRANSITION */
+    --transition:all .35s cubic-bezier(.22,1,.36,1);
+}
+::selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+
+::-moz-selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}

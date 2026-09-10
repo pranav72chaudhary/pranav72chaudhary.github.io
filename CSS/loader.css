@@ -1,0 +1,778 @@
+/*==================================================
+LEGENDARY PREMIUM OPENING SEQUENCE
+FOUNDATION
+==================================================*/
+
+.loader{
+
+    position:fixed;
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#040404;
+
+    z-index:999999;
+
+    opacity:1;
+
+    visibility:visible;
+
+    transition:
+
+        opacity 1.2s ease,
+
+        visibility 1.2s ease;
+
+}
+
+.loader-background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+    background:
+
+    radial-gradient(
+
+        circle at center,
+
+        #111111 0%,
+
+        #090909 35%,
+
+        #040404 70%,
+
+        #000000 100%
+
+    );
+
+    animation:
+
+        darknessBreath 8s ease-in-out infinite;
+
+}
+
+/*==================================================
+STAGE LAYERS
+==================================================*/
+
+#particle-canvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    transition:
+
+        opacity 2.2s ease;
+
+}
+
+.loader-vortex{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:3;
+
+    pointer-events:none;
+
+}
+
+.loader-energy{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:18px;
+
+    height:18px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    opacity:0;
+
+    z-index:4;
+
+}
+
+.loader-forge{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:240px;
+    height:240px;
+    transform:translate(-50%,-50%) scale(1.15);
+    border-radius:50%;
+    opacity:0;
+    z-index:5;
+    pointer-events:none;
+    filter:blur(7px);
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.24) 0%,
+            rgba(180,141,30,.11) 40%,
+            transparent 72%
+        );
+}
+
+@keyframes forgeCompression{
+    0%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(1.15);
+    }
+    100%{
+        opacity:.8;
+        transform:translate(-50%,-50%) scale(.9);
+    }
+}
+
+.loader-emblem{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5;
+
+    opacity:1;
+
+}
+
+.pc-mark{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    opacity:0;
+
+    transform:
+        scale(.22)
+        rotate(-6deg);
+
+    filter:none;
+
+    will-change:transform, opacity;
+
+}
+
+.letter-p,
+.letter-c{
+
+    font-family:
+    "Poppins",
+    sans-serif;
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    line-height:1;
+
+    background:
+linear-gradient(
+
+    180deg,
+
+    #fff8dc 0%,
+
+    #f6dc8a 12%,
+
+    #d4af37 34%,
+
+    #b98d1e 62%,
+
+    #f2d97b 84%,
+
+    #fff4c8 100%
+
+);
+
+text-shadow:
+
+0 0 4px rgba(212,175,55,.08),
+
+0 0 12px rgba(212,175,55,.14);
+
+letter-spacing:-2px;
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+color:transparent;
+
+    user-select:none;
+
+}
+
+.loader-identity{
+
+    position:absolute;
+
+    left:50%;
+
+    top:72%;
+
+    transform:translate(-50%,20px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    opacity:0;
+
+    z-index:7;
+
+}
+
+.loader-gateway{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:8;
+
+}
+
+
+/*==================================================
+ENERGY CORE
+==================================================*/
+
+.loader-energy{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:18px;
+    height:18px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    opacity:0;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    filter:blur(.45px);
+
+    box-shadow:
+
+0 0 6px rgba(212,175,55,.18),
+
+0 0 14px rgba(212,175,55,.08);
+
+}
+
+@keyframes energyBirth{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+            translate(-50%,-50%)
+
+            scale(.08);
+
+    }
+
+    40%{
+
+        opacity:.45;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+
+            translate(-50%,-50%)
+
+            scale(1);
+
+    }
+
+}
+
+@keyframes energyPulse{
+
+    0%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.92);
+
+        box-shadow:
+
+        0 0 6px rgba(212,175,55,.08),
+
+        0 0 12px rgba(212,175,55,.04);
+
+    }
+
+    30%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.97);
+
+    }
+
+    55%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+        box-shadow:
+
+        0 0 10px rgba(212,175,55,.16),
+
+        0 0 22px rgba(212,175,55,.08);
+
+    }
+
+    78%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.95);
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.92);
+
+        box-shadow:
+
+        0 0 6px rgba(212,175,55,.08),
+
+        0 0 12px rgba(212,175,55,.04);
+
+    }
+
+}
+
+/*==================================================
+FORGE WAVE
+==================================================*/
+
+.loader-energy::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:18px;
+
+    height:18px;
+
+    transform:
+
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:
+
+        1px solid rgba(212,175,55,.28);
+
+    opacity:0;
+
+    animation:
+
+        forgeWave 4.5s ease-out infinite;
+
+    animation-delay:4.2s;
+
+}
+
+@keyframes forgeWave{
+
+    0%{
+
+        width:18px;
+
+        height:18px;
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        width:620px;
+
+        height:620px;
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================================
+VORTEX STAGE
+==================================================*/
+
+.loader-vortex{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:700px;
+    height:700px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    opacity:0;
+
+    filter:blur(22px);
+
+    z-index:3;
+
+    pointer-events:none;
+
+    background:
+
+radial-gradient(
+
+    circle,
+
+    rgba(212,175,55,.08) 0%,
+
+    rgba(212,175,55,.03) 26%,
+
+    transparent 62%
+
+),
+
+conic-gradient(
+
+    from 0deg,
+
+    transparent 0deg,
+
+    rgba(212,175,55,.15) 38deg,
+
+    transparent 92deg,
+
+    rgba(212,175,55,.10) 170deg,
+
+    transparent 225deg,
+
+    rgba(212,175,55,.13) 318deg,
+
+    transparent 360deg
+
+);
+
+    }
+
+@keyframes vortexBreath{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+            translate(-50%,-50%)
+
+            scale(.75)
+
+            rotate(0deg);
+
+    }
+
+    50%{
+
+        opacity:.70;
+
+        transform:
+
+            translate(-50%,-50%)
+
+            scale(1)
+
+            rotate(180deg);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+            translate(-50%,-50%)
+
+            scale(1.15)
+
+            rotate(360deg);
+
+    }
+
+}
+/*==================================================
+EMBLEM REVEAL
+==================================================*/
+
+@keyframes emblemReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            scale(.22)
+            rotate(-6deg);
+
+    }
+
+    22%{
+
+        opacity:.18;
+
+        transform:
+            scale(.42)
+            rotate(-4deg);
+
+    }
+
+    45%{
+
+        opacity:.45;
+
+        transform:
+            scale(.72)
+            rotate(-2deg);
+
+    }
+
+    72%{
+
+        opacity:.82;
+
+        transform:
+            scale(1.05)
+            rotate(.5deg);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+/*==================================================
+IDENTITY
+==================================================*/
+
+
+@keyframes identityReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translate(-50%,25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translate(-50%,0);
+
+    }
+
+}
+
+/*==================================================
+GATEWAY
+==================================================*/
+
+.loader-gateway{
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 0%,
+
+            transparent 40%,
+
+            rgba(255,255,255,.03) 75%,
+
+            rgba(255,255,255,.08) 100%
+
+        );
+
+    opacity:0;
+
+}
+
+@keyframes gatewayReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.02);
+
+    }
+
+}
+
+/*==================================================
+LOADER EXIT
+==================================================*/
+
+.loader.fade-out{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+/*=========================================
+SITE HIDDEN UNTIL LOADER COMPLETES
+=========================================*/
+
+#site-content,
+.portfolio{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:none;
+
+}
+
+@keyframes darknessBreath{
+
+    0%{
+
+        filter:brightness(.96);
+
+    }
+
+    50%{
+
+        filter:brightness(1.03);
+
+    }
+
+    100%{
+
+        filter:brightness(.96);
+
+    }
+
+}
+

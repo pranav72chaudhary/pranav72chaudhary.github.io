@@ -1,0 +1,25 @@
+.portfolio{
+    display:flex;
+}
+.content{
+    flex:1;
+    margin-left:240px;
+    width:calc(100% - 240px);
+}
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    gap:60px;
+}
+.hero-left{
+    flex:1;
+}
+.hero-right{
+    flex:0 0 420px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

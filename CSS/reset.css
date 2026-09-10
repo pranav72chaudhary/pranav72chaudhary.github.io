@@ -1,0 +1,194 @@
+/* ==== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+   box-sizing:border-box; 
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    min-height:100vh;
+}
+img{
+    max-width:100%;
+    display:block;
+}
+button{
+    cursor:pointer;
+    border:none;
+    background:none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+ul{
+    list-style:none;
+}
+/*==========================
+TEXT SELECTION
+==========================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+
+::-moz-selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+html{
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-padding-top:40px;
+
+}
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+body{
+
+    overflow-x:hidden;
+
+}
+*{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+button,
+a{
+
+    touch-action:manipulation;
+
+}
+@media (prefers-reduced-motion: reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+    }
+
+}
+svg,
+video,
+canvas{
+
+    display:block;
+
+    max-width:100%;
+
+}
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+button{
+
+    cursor:pointer;
+
+}
+input,
+textarea,
+button{
+
+    font:inherit;
+
+}
+[hidden]{
+
+    display:none !important;
+
+}
+picture{
+
+    display:block;
+
+}
+textarea{
+
+    resize:vertical;
+
+}
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+img{
+
+    -webkit-user-drag:none;
+
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+
+    outline:2px solid var(--color-accent);
+
+    outline-offset:4px;
+
+}
+html{
+
+    scroll-behavior:smooth;
+
+}

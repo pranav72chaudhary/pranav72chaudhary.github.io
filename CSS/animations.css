@@ -1,0 +1,98 @@
+/*==========================
+GLOBAL ANIMATIONS
+==========================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+    opacity .65s cubic-bezier(.22,1,.36,1),
+    transform .65s cubic-bezier(.22,1,.36,1);
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-35px);
+
+    transition:
+    opacity .65s cubic-bezier(.22,1,.36,1),
+    transform .65s cubic-bezier(.22,1,.36,1);
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(35px);
+
+    transition:
+    opacity .65s cubic-bezier(.22,1,.36,1),
+    transform .65s cubic-bezier(.22,1,.36,1);
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+/*==========================
+STAGGER ANIMATIONS
+==========================*/
+
+.stat-card,
+.project-card,
+.skill-card,
+.timeline-item,
+.certificate-card,
+.contact-card{
+
+    opacity:0;
+
+}
+
+.stat-card.show,
+.project-card.show,
+.skill-card.show,
+.timeline-item.show,
+.certificate-card.show,
+.contact-card.show{
+
+    opacity:1;
+
+}
+body{
+
+    opacity:1;
+
+}
+.about-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

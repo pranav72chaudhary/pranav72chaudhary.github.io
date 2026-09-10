@@ -1,0 +1,19 @@
+@media print{
+
+    .sidebar,
+    .back-to-top,
+    .hero-buttons{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+}
