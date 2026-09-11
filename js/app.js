@@ -198,12 +198,14 @@ if (
 
 });
 /*==========================
+
 CONTACT FORM VALIDATION
-==========================*/
+
+\==========================*/
 
 const contactForm = document.getElementById("contact-form");
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
@@ -247,9 +249,41 @@ contactForm.addEventListener("submit", (event) => {
 
     }
 
-    alert("Message sent successfully!");
+    const formData = new FormData(contactForm);
 
-    contactForm.reset();
+    try {
+
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
+
+        const result = await response.json();
+
+        if (result.success) {
+
+            alert("Message sent successfully!");
+
+            contactForm.reset();
+
+        } else {
+
+            alert(
+                "Unable to send your message. Please try again."
+            );
+
+        }
+
+    } catch (error) {
+
+        alert(
+            "Unable to send your message. Please try again."
+        );
+
+    }
 
 });
 
