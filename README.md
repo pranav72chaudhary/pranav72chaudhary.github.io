@@ -30,7 +30,7 @@ index.html
 
 ## Live Demo
 
-Coming Soon
+https://pranav72chaudhary.github.io/
 
 ## Author
 
