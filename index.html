@@ -961,12 +961,20 @@ CONTACT
         <!-- RIGHT -->
 
         <form
-class="contact-form fade-up"
-id="contact-form">
+    class="contact-form fade-up"
+    id="contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST">
+
+    <input
+    type="hidden"
+    name="access_key"
+    value="5be6f3fa-9615-44d5-8e3f-ae23a943c3bf">
 
             <input
     type="text"
     id="name"
+    name="name"
     aria-label="Your Name"
     placeholder="Your Name"
     required
@@ -975,6 +983,7 @@ id="contact-form">
 <input
     type="email"
     id="email"
+    name="email"
     aria-label="Your Email"
     placeholder="Your Email"
     required
@@ -982,6 +991,7 @@ id="contact-form">
 
 <textarea
     id="message"
+    name="message"
     aria-label="Your Message"
     rows="6"
     placeholder="Your Message"
