@@ -1280,17 +1280,23 @@ CERTIFICATE MODAL
 
     position:relative;
 
-    max-width:900px;
+    width:90vw;
 
-    width:90%;
+    max-width:1100px;
+
+    height:88vh;
 
     z-index:2;
 
 }
 
-.certificate-container img{
+.certificate-container iframe{
 
     width:100%;
+
+    height:100%;
+
+    display:block;
 
     border-radius:16px;
 
