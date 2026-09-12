@@ -346,7 +346,7 @@ const certificateButtons = document.querySelectorAll(".view-certificate");
 
 const certificateModal = document.getElementById("certificate-modal");
 
-const certificateImage = document.getElementById("certificate-image");
+const certificatePdf = document.getElementById("certificate-pdf");
 
 const certificateClose = document.getElementById("certificate-close");
 
@@ -354,9 +354,9 @@ const certificateOverlay = document.getElementById("certificate-overlay");
 
 const certificateMap = {
 
-    "programming":"assets/certificates/programming.webp",
+    "programming":"assets/certificates/advanced-programming.pdf",
 
-    "digital-marketing":"assets/certificates/digital-marketing.webp"
+    "digital-marketing":"assets/certificates/advanced-digital-marketing.pdf"
 
 };
 
@@ -366,7 +366,7 @@ certificateButtons.forEach(button=>{
 
         const certificate = button.dataset.certificate;
 
-        certificateImage.src = certificateMap[certificate];
+        certificatePdf.src = certificateMap[certificate];
 
         certificateModal.classList.add("active");
 
