@@ -368,6 +368,8 @@ certificateButtons.forEach(button=>{
 
         const certificatePath = certificateMap[certificate];
 
+        certificateImage.style.opacity = "0";
+
         const preloadImage = new Image();
 
         preloadImage.onload = () => {
@@ -375,6 +377,8 @@ certificateButtons.forEach(button=>{
             certificateImage.src = certificatePath;
 
             certificateModal.classList.add("active");
+
+            certificateImage.style.opacity = "1";
 
         };
 
