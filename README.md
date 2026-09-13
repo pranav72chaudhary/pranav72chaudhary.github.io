@@ -1,4 +1,4 @@
-# Legendary Portfolio
+# Frontend Portfolio
 
 A premium frontend developer portfolio built using only HTML, CSS and Vanilla JavaScript.
 

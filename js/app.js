@@ -414,7 +414,7 @@ if (heroImage) {
 
 }
 /*====================================
-LEGENDARY FORGE PARTICLE ENGINE V3
+PREMIUM FORGE PARTICLE ENGINE V3
 ====================================*/
 
 const canvas = document.getElementById("particle-canvas");
@@ -434,7 +434,7 @@ window.addEventListener("resize", resizeCanvas);
 const particles=[];
 
 /*====================================
-LEGENDARY TIMELINE REFERENCES
+PREMIUM TIMELINE REFERENCES
 ====================================*/
 
 const loader = document.getElementById("loader");
