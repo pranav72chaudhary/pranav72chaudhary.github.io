@@ -366,9 +366,19 @@ certificateButtons.forEach(button=>{
 
         const certificate = button.dataset.certificate;
 
-        certificateImage.src = certificateMap[certificate];
+        const certificatePath = certificateMap[certificate];
 
-        certificateModal.classList.add("active");
+        const preloadImage = new Image();
+
+        preloadImage.onload = () => {
+
+            certificateImage.src = certificatePath;
+
+            certificateModal.classList.add("active");
+
+        };
+
+        preloadImage.src = certificatePath;
 
     });
 
