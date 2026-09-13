@@ -1290,13 +1290,15 @@ CERTIFICATE MODAL
 
 }
 
-.certificate-container iframe{
+.certificate-container img{
 
     width:100%;
 
     height:100%;
 
     display:block;
+
+    object-fit:contain;
 
     border-radius:16px;
 
@@ -1307,10 +1309,10 @@ CERTIFICATE MODAL
         0 0 20px rgba(212,175,55,.18);
 
 }
-
 .certificate-close{
 
-    position:absolute;
+    position:
+    absolute;
 
     top:-18px;
 
