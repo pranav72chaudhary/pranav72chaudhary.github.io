@@ -354,7 +354,7 @@ const certificateOverlay = document.getElementById("certificate-overlay");
 
 const certificateMap = {
 
-    "programming":"assets/certificates/advanced-programming.webp",
+    "programming":"assets/certificates/advanced-programming.webp?v=2",
 
     "digital-marketing":"assets/certificates/advanced-digital-marketing.webp"
 
