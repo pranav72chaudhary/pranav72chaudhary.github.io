@@ -162,39 +162,48 @@ ACTIVE NAVIGATION
 const sectionsForNav = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
+let navScrollTicking = false;
+
+function updateActiveNavLink() {
 
     let currentSection = "home";
 
     sectionsForNav.forEach((section) => {
 
         const scrollPosition = window.scrollY + (window.innerHeight * 0.35);
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
 
-const sectionTop = section.offsetTop;
-const sectionHeight = section.offsetHeight;
-
-if (
-    scrollPosition >= sectionTop &&
-    scrollPosition < sectionTop + sectionHeight
-) {
-    currentSection = section.getAttribute("id");
-}
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+        ) {
+            currentSection = section.getAttribute("id");
+        }
 
     });
 
     navLinks.forEach((link) => {
 
         link.classList.remove("active");
-        
-        if(currentSection === "") return;
+
+        if (currentSection === "") return;
 
         if (link.getAttribute("href") === `#${currentSection}`) {
-
             link.classList.add("active");
-
         }
 
     });
+
+    navScrollTicking = false;
+}
+
+window.addEventListener("scroll", () => {
+
+    if (!navScrollTicking) {
+        navScrollTicking = true;
+        requestAnimationFrame(updateActiveNavLink);
+    }
 
 });
 /*==========================
